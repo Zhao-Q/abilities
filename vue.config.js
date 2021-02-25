@@ -3,6 +3,7 @@ module.exports = {
   outputDir: "dist",
   indexPath: "../index.html",
   filenameHashing: true,
+
   pages: {
     index: {
       // page 的入口
@@ -22,5 +23,5 @@ module.exports = {
     // 模板会被推导为 `public/subpage.html`
     // 并且如果找不到的话，就回退到 `public/index.html`。
     // 输出文件名会被推导为 `subpage.html`。
-  }
+  },
 }
