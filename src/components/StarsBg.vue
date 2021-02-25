@@ -81,7 +81,7 @@ export default {
   position: absolute;
   perspective-origin: 50% 100%;
   left: 45%;
-  animation: rotate 90s infinite linear;
+  -webkit-animation: rotate 90s infinite linear;
   bottom: 0;
 }
 .star {
