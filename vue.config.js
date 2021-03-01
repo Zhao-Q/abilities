@@ -1,7 +1,7 @@
 module.exports = {
-  publicPath: './dist/',
+  publicPath: '/',
   outputDir: "dist",
-  indexPath: "../index.html",
+  indexPath: "index.html",
   filenameHashing: true,
 
   pages: {
@@ -24,4 +24,11 @@ module.exports = {
     // 并且如果找不到的话，就回退到 `public/index.html`。
     // 输出文件名会被推导为 `subpage.html`。
   },
+  devServer: {
+    overlay: {
+      warnings: true,
+      errors: true
+    }
+  },
+  lintOnSave: process.env.NODE_ENV !== 'production'
 }

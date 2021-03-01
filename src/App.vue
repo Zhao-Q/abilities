@@ -1,14 +1,20 @@
 <template>
-  <StarsBg />
+  <router-view />
 </template>
 
 <script>
-// import MainIndex from "./pages/MainIndex.vue";
-import StarsBg from "./components/StarsBg.vue";
-
 export default {
   name: "App",
-  components: { StarsBg },
+  components: {},
+  created() {},
+  mounted() {
+    this.$router.push({
+      path: "/mainIndex",
+      query: {
+        t: +new Date(),
+      },
+    });
+  },
 };
 </script>
 
@@ -19,8 +25,9 @@ body {
 }
 
 body {
+  width: 100%;
   height: 100%;
-  min-width: 1440px;
+  min-width: 440px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
